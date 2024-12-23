@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Приложение для учета расходов</h1>
+    <input class="js-input" type="number" placeholder="Введите расход">
+    <button class="js-button">Добавить расход</button>
+
+    <input class="input-limit" type="number" placeholder="Изменить лимит">
+ 
+    <button class="limit-btn">Изменить лимит</button>
+    <div>
+      <p>Категория расхода: <input type="text" placeholder="Введите на что потратили" class="select"></p>
+    </div>
+    <p>Лимит <span class="js-limit">0</span>$</p>
+
+    
+
+    <p>Сумма: <span class="js-sum">0</span></p>
+    <p>Баланс: <span class="js-balance">10000</span></p>
+    <p>Статус: <span class="js-status">Normal</span></p>
+
+    <h2>История расходов:</h2>
+    <div class="js-history history"></div>
+</div>
+
+
+<script src="index.js"></script>
+</body>
+</html>
