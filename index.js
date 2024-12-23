@@ -13,6 +13,7 @@ const limitInputNode = document.querySelector('.input-limit');
 const limitButtonNode = document.querySelector('.limit-btn');
 const fileNode = document.querySelector('.file');
 const selectNode = document.querySelector('.select');
+const refreshButtonNode = document.querySelector('.refresh-btn'); // Кнопка обновления
 
 limitNode.innerText = LIMIT;
 
@@ -26,8 +27,8 @@ buttonNode.addEventListener('click', function () {
     const expense = parseInt(inputNode.value);
     const category = selectNode.value; // Сохраняем текущую категорию
 
-    expenses.push({ 
-        amount: expense, 
+    expenses.push({
+        amount: expense,
         date: new Date().toLocaleString(),
         category: category // Сохраняем категорию в объекте расхода
     });
@@ -66,7 +67,7 @@ function updateHistory() {
     expenses.forEach((expense, index) => {
         historyHTML += `
             <div class="history-item">
-                <strong>${index + 1}. ${expense.amount}P - Потрачено на: ${expense.category}</strong>
+                <strong>${index + 1}. ${expense.amount}$ - Потрачено на: ${expense.category}</strong>
                 <br>
                 Дата добавления: ${expense.date}
             </div>
@@ -90,4 +91,9 @@ limitButtonNode.addEventListener('click', function () {
     setTimeout(function () {
         limitButtonNode.textContent = 'Изменить лимит';
     }, 1000);
+});
+
+// Обработчик для кнопки обновления
+refreshButtonNode.addEventListener('click', function () {
+    location.reload(); // Перезагружаем страницу
 });
