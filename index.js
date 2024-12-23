@@ -66,7 +66,7 @@ function updateHistory() {
     expenses.forEach((expense, index) => {
         historyHTML += `
             <div class="history-item">
-                <strong>${index + 1}. ${expense.amount}$ - Потрачено на: ${expense.category}</strong>
+                <strong>${index + 1}. ${expense.amount}P - Потрачено на: ${expense.category}</strong>
                 <br>
                 Дата добавления: ${expense.date}
             </div>
