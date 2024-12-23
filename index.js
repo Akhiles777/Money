@@ -13,6 +13,10 @@ const limitInputNode = document.querySelector('.input-limit');
 
 const limitButtonNode = document.querySelector('.limit-btn');
 
+const fileNode = document.querySelector('.file')
+
+const selectNode = document.querySelector('.select')
+
 limitNode.innerText = LIMIT;
 
 buttonNode.addEventListener('click', function () {
@@ -79,9 +83,10 @@ function updateHistory() {
 
         historyHTML += `
                     <div class="history-item">
-                        <strong>${index + 1}. ${expense.amount}$</strong>
+                        <strong>${index + 1}. ${expense.amount}$ - Потрачено на: ${selectNode.value}</strong>
                         <br>
                         Дата добавления: ${expense.date}
+                        
                     </div>
                 `;
     });
@@ -113,6 +118,10 @@ limitButtonNode.addEventListener('click', function () {
     
 
 })
+
+
+
+
 
 
 
