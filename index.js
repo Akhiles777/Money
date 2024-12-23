@@ -83,6 +83,8 @@ limitButtonNode.addEventListener('click', function () {
         return;
     }
 
+
+
     LIMIT = parseInt(limitInputNode.value); // Убедимся, что это число
     limitNode.innerText = LIMIT;
 
